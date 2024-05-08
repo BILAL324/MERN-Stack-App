@@ -1,0 +1,13 @@
+h1 Mark Attendance
+form(action='/class/' + class._id + '/attendance', method='post')
+    label(for='student') Student:
+    select#student(name='student')
+        each student in students
+            option(value=student._id)= student.name
+    br
+    label(for='attendance') Attendance:
+    select#attendance(name='attendance')
+        option(value='present') Present
+        option(value='absent') Absent
+    br
+    input(type='submit', value='Mark Attendance')

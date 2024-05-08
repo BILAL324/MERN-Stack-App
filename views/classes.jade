@@ -1,0 +1,14 @@
+h1 Classes
+table
+  thead
+    tr
+      th Name
+      th Actions
+  tbody
+    each class in classes
+      tr
+        td= class.name
+        td
+          a(href='/class/' + class._id + '/attendance') Mark Attendance
+          a(href='/class/' + class._id + '/edit') Edit
+          a(href='/class/' + class._id + '/delete') Delete
